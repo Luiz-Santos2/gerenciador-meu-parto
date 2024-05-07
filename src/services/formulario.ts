@@ -10,7 +10,7 @@ const FormularioService = {
      */
     buscarFormularios: async (): Promise<any[]> => {
         //Retorna a lista de formulários
-        return ["1", "2"]
+        return ["1", "2", "3", "4"]
     },
 
     /**

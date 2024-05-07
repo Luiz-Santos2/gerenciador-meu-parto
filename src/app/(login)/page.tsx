@@ -18,7 +18,7 @@ export default function LoginPage() {
       setErro(false);
       if (sucesso) {
         setUsuario(usuario);
-        router.push('/admin/dashboard');
+        router.push('/admin/inicio');
       } else {
         setErro(true);
       }
@@ -49,7 +49,7 @@ export default function LoginPage() {
                         <div className="mb-3">
                           <Field type="password" name="senha" className="form-control form-control-lg" placeholder="Senha" required />
                         </div>
-                        {erro && <p className="alert alert-danger">Login ou senha incorreta!</p>}
+                        {erro && <p className="alert alert-danger text-center">Login ou senha incorreta!</p>}
                         <div className="text-center">
                           <button type="submit" className="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Logar</button>
                         </div>

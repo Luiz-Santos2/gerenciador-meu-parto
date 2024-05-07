@@ -4,30 +4,21 @@ import * as React from 'react';
 import { storage } from '@/config/firebase';
 import Link from 'next/link';
 
-export interface Formulario1Props {
+export interface Formulario3Props {
   formulario: any;
   handleSalvar(dados: any): void;
 }
 
-export default function Formulario2({ formulario, handleSalvar }: Formulario1Props) {
+export default function Formulario3({ formulario, handleSalvar }: Formulario3Props) {
 
   const handleSubmit = async (dados: any) => {
     //trata os arquivos
-    if (dados.imagem) {
+    if (dados.video) {
       //converte o audio para blob
-      await uploadBytesResumable(ref(storage, 'tela2/imagem1.jpg'), dados.imagem)
+      await uploadBytesResumable(ref(storage, 'tela3/video.mp4'), dados.video)
         .then(async snapshot => {
           //Altera a imagem para URL
-          dados.imagem = await getDownloadURL(snapshot.ref);
-        })
-    }
-
-    if (dados.imagem2) {
-      //converte o audio para blob
-      await uploadBytesResumable(ref(storage, 'tela2/imagem2.jpg'), dados.imagem2)
-        .then(async snapshot => {
-          //Altera a imagem para URL
-          dados.imagem2 = await getDownloadURL(snapshot.ref);
+          dados.video = await getDownloadURL(snapshot.ref);
         })
     }
 
@@ -53,19 +44,11 @@ export default function Formulario2({ formulario, handleSalvar }: Formulario1Pro
                 </div>
               </div>
 
-              {/* IMAGEM */}
+              {/* VÍDEO */}
               <div className="col-md-12">
                 <div className="form-group">
-                  <label className="form-control-label">Imagem {formulario?.imagem && <a href={formulario.imagem} target="_blank">(VISUALIZAR IMAGEM)</a>} </label>
-                  <input className="form-control" type="file" accept="image/jpg" onChange={(e: any) => { setFieldValue("imagem", e.target.files[0]) }} />
-                </div>
-              </div>
-
-              {/* IMAGEM 2*/}
-              <div className="col-md-12">
-                <div className="form-group">
-                  <label className="form-control-label">Imagem 2 {formulario?.imagem2 && <a href={formulario.imagem2} target="_blank">(VISUALIZAR IMAGEM)</a>} </label>
-                  <input className="form-control" type="file" accept="image/jpg" onChange={(e: any) => { setFieldValue("imagem2", e.target.files[0]) }} />
+                  <label className="form-control-label">Vídeo {formulario?.video && <a href={formulario.video} target="_blank">(VISUALIZAR VÍDEO)</a>} </label>
+                  <input className="form-control" type="file" accept="video/mp4" onChange={(e: any) => { setFieldValue("video", e.target.files[0]) }} />
                 </div>
               </div>
 

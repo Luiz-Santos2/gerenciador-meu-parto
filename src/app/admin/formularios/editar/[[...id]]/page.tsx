@@ -2,7 +2,7 @@
 import * as React from 'react';
 import { AdminHeader } from '../../../components';
 import { useFormularioService } from '../../../../../services/formulario';
-import { Formulario1, Formulario2 } from './forms';
+import { Formulario1, Formulario2, Formulario3, Formulario4 } from './forms';
 import { useRouter } from 'next/navigation';
 
 export default function FormularioEditarPage ({params}: any) {
@@ -46,6 +46,8 @@ export default function FormularioEditarPage ({params}: any) {
               <>
                 { params.id && params.id[0] == "1" && <Formulario1 formulario={formulario} handleSalvar={handleSalvar} /> }
                 { params.id && params.id[0] == "2" && <Formulario2 formulario={formulario} handleSalvar={handleSalvar} /> }
+                { params.id && params.id[0] == "3" && <Formulario3 formulario={formulario} handleSalvar={handleSalvar} /> }
+                { params.id && params.id[0] == "4" && <Formulario4 formulario={formulario} handleSalvar={handleSalvar} /> }
               </>
             }
 

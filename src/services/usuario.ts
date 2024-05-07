@@ -11,8 +11,12 @@ const UsuarioService = {
      * @returns {usuario caso logado com sucesso, e o sucesso com um status de logado ou não}
      */
     logar: async(email: string, senha: string): Promise<{usuario?:any, sucesso:boolean}> => {
+        console.log(email, senha);
+        console.log('A');
         return signInWithEmailAndPassword(auth, email, senha)
             .then(async (retorno) => { 
+                console.log('B');
+                console.log(retorno.user.uid);
                 //Verifica se o usuario não foi excluido do banco
                 const dados = await getDoc(doc(db, 'users', retorno.user.uid));
                 console.log('A');
@@ -22,7 +26,10 @@ const UsuarioService = {
                 return { sucesso: false };
             
             })
-            .catch(erro => { return { sucesso: false }});
+            .catch(erro => { 
+                console.log(erro)
+                return { sucesso: false }
+            });
     },
 
     /**
