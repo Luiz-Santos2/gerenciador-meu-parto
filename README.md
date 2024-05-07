@@ -19,4 +19,4 @@ Dentro da pasta html, existe o template original para quem desejar buscar inform
 
 # Exemplo disponivel
 
-https://carloswgama.github.io/next-template-admin/
+https://carloswgama.github.io/next-template-admin/# gerenciador-meu-parto
