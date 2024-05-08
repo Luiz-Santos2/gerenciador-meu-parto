@@ -13,21 +13,39 @@ export default function Formulario1({ formulario, handleSalvar }: Formulario1Pro
 
   const handleSubmit = async (dados: any) => {
     //trata os arquivos
-    if (dados.audio) {
+    if (dados.audio1) {
       //converte o audio para blob
-      await uploadBytesResumable(ref(storage, 'tela1/audio.mp3'), dados.audio)
+      await uploadBytesResumable(ref(storage, 'tela1/audio1.mp3'), dados.audio1)
         .then(async snapshot => {
           //Altera o audio para URL
-          dados.audio = await getDownloadURL(snapshot.ref);
+          dados.audio1 = await getDownloadURL(snapshot.ref);
         })
     }
 
-    if (dados.imagem) {
+    if (dados.audio2) {
       //converte o audio para blob
-      await uploadBytesResumable(ref(storage, 'tela1/imagem.jpg'), dados.imagem)
+      await uploadBytesResumable(ref(storage, 'tela1/audio2.mp3'), dados.audio2)
+        .then(async snapshot => {
+          //Altera o audio para URL
+          dados.audio2 = await getDownloadURL(snapshot.ref);
+        })
+    }
+
+    if (dados.imagem1) {
+      //converte a imagem para blob
+      await uploadBytesResumable(ref(storage, 'tela1/imagem1.jpg'), dados.imagem1)
         .then(async snapshot => {
           //Altera a imagem para URL
-          dados.imagem = await getDownloadURL(snapshot.ref);
+          dados.imagem1 = await getDownloadURL(snapshot.ref);
+        })
+    }
+
+    if (dados.imagem2) {
+      //converte a imagem para blob
+      await uploadBytesResumable(ref(storage, 'tela1/imagem2.jpg'), dados.imagem2)
+        .then(async snapshot => {
+          //Altera a imagem para URL
+          dados.imagem2 = await getDownloadURL(snapshot.ref);
         })
     }
 
@@ -44,47 +62,54 @@ export default function Formulario1({ formulario, handleSalvar }: Formulario1Pro
         <Form>
           <div className="card-body">
             <div className="row">
-              {/* TITULO */}
+
+              {/* AUDIO 1 */}
               <div className="col-md-12">
                 <div className="form-group">
-                  <label className="form-control-label">Título</label>
-                  <Field className="form-control" type="text" name="titulo" />
+                  <label className="form-control-label">Audio 1 {formulario?.audio1 && <a href={formulario.audio1} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
+                  <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audio1", e.target.files[0]) }} />
                 </div>
               </div>
 
               {/* TEXTO  1 */}
-              <div className="col-md-6">
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Texto 1</label>
                   <Field as="textarea" className="form-control" name="texto1" />
                 </div>
               </div>
 
+              {/* IMAGEM 1 */}
+              <div className="col-md-12">
+                <div className="form-group">
+                  <label className="form-control-label">Imagem 1 {formulario?.imagem1 && <a href={formulario.imagem1} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
+                  <input className="form-control" type="file" accept="image/png" onChange={(e: any) => { setFieldValue("imagem1", e.target.files[0]) }} />  
+                </div>
+              </div>
+
+              {/* AUDIO 2 */}
+              <div className="col-md-12">
+                <div className="form-group">
+                  <label className="form-control-label">Audio 2 {formulario?.audio2 && <a href={formulario.audio2} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
+                  <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audio2", e.target.files[0]) }} />
+                </div>
+              </div>
+
               {/* TEXTO  2 */}
-              <div className="col-md-6">
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Texto 2</label>
                   <Field as="textarea" className="form-control" name="texto2" />
                 </div>
               </div>
 
-              {/* AUDIO */}
+              {/* IMAGEM 2 */}
               <div className="col-md-12">
                 <div className="form-group">
-                  <label className="form-control-label">Audio {formulario?.audio && <a href={formulario.audio} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
-                  <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audio", e.target.files[0]) }} />
+                  <label className="form-control-label">Imagem 2 {formulario?.imagem2 && <a href={formulario.imagem2} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
+                  <input className="form-control" type="file" accept="image/png" onChange={(e: any) => { setFieldValue("imagem2", e.target.files[0]) }} />
                 </div>
               </div>
-
-              {/* IMAGEM */}
-              <div className="col-md-12">
-                <div className="form-group">
-                  <label className="form-control-label">Imagem {formulario?.imagem && <a href={formulario.imagem} target="_blank">(VISUALIZAR IMAGEM)</a>} </label>
-                  <input className="form-control" type="file" accept="image/jpg" onChange={(e: any) => { setFieldValue("imagem", e.target.files[0]) }} />
-                </div>
-              </div>
-
-
 
               {/* BOTÃO */}
               <div className="col-md-12">

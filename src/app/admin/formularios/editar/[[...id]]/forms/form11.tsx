@@ -4,21 +4,30 @@ import * as React from 'react';
 import { storage } from '@/config/firebase';
 import Link from 'next/link';
 
-export interface Formulario1Props {
+export interface Formulario5Props {
   formulario: any;
   handleSalvar(dados: any): void;
 }
 
-export default function Formulario2({ formulario, handleSalvar }: Formulario1Props) {
+export default function Formulario8({ formulario, handleSalvar }: Formulario5Props) {
 
   const handleSubmit = async (dados: any) => {
     //trata os arquivos
     if (dados.audio) {
       //converte o audio para blob
-      await uploadBytesResumable(ref(storage, 'tela2/audio.jpg'), dados.audio)
+      await uploadBytesResumable(ref(storage, 'tela11/audio.mp3'), dados.audio)
         .then(async snapshot => {
           //Altera o audio para URL
           dados.audio = await getDownloadURL(snapshot.ref);
+        })
+    }
+
+    if (dados.imagem) {
+      //converte a imagem para blob
+      await uploadBytesResumable(ref(storage, 'tela11/imagem.png'), dados.imagem)
+        .then(async snapshot => {
+          //Altera a imagem para URL
+          dados.imagem = await getDownloadURL(snapshot.ref);
         })
     }
 
@@ -44,6 +53,14 @@ export default function Formulario2({ formulario, handleSalvar }: Formulario1Pro
                 </div>
               </div>
 
+              {/* TÍTULO */}
+              <div className="col-md-12">
+                <div className="form-group">
+                  <label className="form-control-label">Título</label>
+                  <Field as="textarea" className="form-control" name="titulo" />
+                </div>
+              </div>
+
               {/* MENU 1 */}
               <div className="col-md-6">
                 <div className="form-group">
@@ -61,34 +78,18 @@ export default function Formulario2({ formulario, handleSalvar }: Formulario1Pro
               </div>
 
               {/* MENU 3 */}
-              <div className="col-md-6">
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Menu 3</label>
                   <Field as="textarea" className="form-control" name="menu3" />
                 </div>
               </div>
 
-              {/* MENU 4 */}
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label className="form-control-label">Menu 4</label>
-                  <Field as="textarea" className="form-control" name="menu4" />
-                </div>
-              </div>
-
-              {/* MENU 5 */}
+              {/* IMAGEM */}
               <div className="col-md-12">
                 <div className="form-group">
-                  <label className="form-control-label">Menu 5</label>
-                  <Field as="textarea" className="form-control" name="menu5" />
-                </div>
-              </div>
-
-              {/* TEXTO */}
-              <div className="col-md-12">
-                <div className="form-group">
-                  <label className="form-control-label">Texto</label>
-                  <Field as="textarea" className="form-control" name="texto" />
+                  <label className="form-control-label">Imagem {formulario?.imagem && <a href={formulario.imagem} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
+                  <input className="form-control" type="file" accept="image/png" onChange={(e: any) => { setFieldValue("imagem", e.target.files[0]) }} />
                 </div>
               </div>
 
