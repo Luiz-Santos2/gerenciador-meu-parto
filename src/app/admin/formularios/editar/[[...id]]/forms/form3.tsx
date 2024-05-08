@@ -151,7 +151,7 @@ export default function Formulario3({ formulario, handleSalvar }: Formulario3Pro
                   <label className="form-control-label">Áudio Subtítulo 2 {formulario?.audioSubtitulo2 && <a href={formulario.audioSubtitulo2} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audioSubtitulo2", e.target.files[0]) }} />
                 </div>
-              </div>              
+              </div>
 
               <thead>
                 <tr>
@@ -160,8 +160,8 @@ export default function Formulario3({ formulario, handleSalvar }: Formulario3Pro
                 </tr>
               </thead>
 
-               {/* AUDIO TITULO 2 */}
-               <div className="col-md-12">
+              {/* AUDIO TITULO 2 */}
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Áudio Título 2 {formulario?.audioTitulo2 && <a href={formulario.audioTitulo2} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audioTitulo2", e.target.files[0]) }} />
@@ -214,8 +214,8 @@ export default function Formulario3({ formulario, handleSalvar }: Formulario3Pro
                 </tr>
               </thead>
 
-               {/* AUDIO TITULO 3 */}
-               <div className="col-md-12">
+              {/* AUDIO TITULO 3 */}
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Áudio Título 3 {formulario?.audioTitulo3 && <a href={formulario.audioTitulo3} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audioTitulo3", e.target.files[0]) }} />

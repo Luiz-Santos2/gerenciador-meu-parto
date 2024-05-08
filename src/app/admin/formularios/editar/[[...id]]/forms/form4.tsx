@@ -113,7 +113,7 @@ export default function Formulario4({ formulario, handleSalvar }: Formulario4Pro
           <div className="card-body">
             <div className="row">
 
-            <thead>
+              <thead>
                 <tr>
                   <th className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Fase Latente</th>
                   <th className="text-secondary opacity-7"></th>
@@ -160,7 +160,7 @@ export default function Formulario4({ formulario, handleSalvar }: Formulario4Pro
                 </div>
               </div>
 
-               {/* AUTOR 1 */}
+              {/* AUTOR 1 */}
               <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Autor 1</label>
@@ -215,7 +215,7 @@ export default function Formulario4({ formulario, handleSalvar }: Formulario4Pro
                 </div>
               </div>
 
-               {/* AUTOR 2 */}
+              {/* AUTOR 2 */}
               <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Autor 2</label>
@@ -270,7 +270,7 @@ export default function Formulario4({ formulario, handleSalvar }: Formulario4Pro
                 </div>
               </div>
 
-               {/* AUTOR 3 */}
+              {/* AUTOR 3 */}
               <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Autor 3</label>
@@ -325,7 +325,7 @@ export default function Formulario4({ formulario, handleSalvar }: Formulario4Pro
                 </div>
               </div>
 
-               {/* AUTOR 4 */}
+              {/* AUTOR 4 */}
               <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Autor 4</label>
@@ -380,7 +380,7 @@ export default function Formulario4({ formulario, handleSalvar }: Formulario4Pro
                 </div>
               </div>
 
-               {/* AUTOR 5 */}
+              {/* AUTOR 5 */}
               <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Autor 5</label>

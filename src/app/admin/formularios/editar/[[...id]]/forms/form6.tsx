@@ -39,7 +39,7 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
           dados.imagem1 = await getDownloadURL(snapshot.ref);
         })
     }
-     if (dados.video2) {
+    if (dados.video2) {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela6/video2.mp4'), dados.video2)
         .then(async snapshot => {
@@ -173,7 +173,7 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
           dados.imagem6 = await getDownloadURL(snapshot.ref);
         })
     }
-    
+
 
     handleSalvar(dados);
   }
@@ -189,15 +189,15 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
           <div className="card-body">
             <div className="row">
 
-            <thead>
+              <thead>
                 <tr>
                   <th className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Exercícios para a pelve e períneo</th>
                   <th className="text-secondary opacity-7"></th>
                 </tr>
               </thead>
 
-               {/* AUDIO TÍTULO 1 */}
-               <div className="col-md-6">
+              {/* AUDIO TÍTULO 1 */}
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Áudio Título 1 {formulario?.audio1 && <a href={formulario.audio1} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audio1", e.target.files[0]) }} />
@@ -228,7 +228,7 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </div>
               </div>
 
-               {/* AUTOR 1 */}
+              {/* AUTOR 1 */}
               <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Autor 1</label>
@@ -236,8 +236,8 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </div>
               </div>
 
-               {/* IMAGEM 1 */}
-               <div className="col-md-12">
+              {/* IMAGEM 1 */}
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Imagem 1 {formulario?.imagem1 && <a href={formulario.imagem1} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="image/png" onChange={(e: any) => { setFieldValue("imagem1", e.target.files[0]) }} />
@@ -251,8 +251,8 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </tr>
               </thead>
 
-               {/* AUDIO TÍTULO 2 */}
-               <div className="col-md-6">
+              {/* AUDIO TÍTULO 2 */}
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Áudio Título 2 {formulario?.audio2 && <a href={formulario.audio2} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audio2", e.target.files[0]) }} />
@@ -283,7 +283,7 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </div>
               </div>
 
-               {/* AUTOR 2 */}
+              {/* AUTOR 2 */}
               <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Autor 2</label>
@@ -291,8 +291,8 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </div>
               </div>
 
-               {/* IMAGEM 2 */}
-               <div className="col-md-12">
+              {/* IMAGEM 2 */}
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Imagem 2 {formulario?.imagem2 && <a href={formulario.imagem2} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="image/png" onChange={(e: any) => { setFieldValue("imagem2", e.target.files[0]) }} />
@@ -306,8 +306,8 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </tr>
               </thead>
 
-               {/* AUDIO TÍTULO 3 */}
-               <div className="col-md-6">
+              {/* AUDIO TÍTULO 3 */}
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Áudio Título 3 {formulario?.audio3 && <a href={formulario.audio3} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audio3", e.target.files[0]) }} />
@@ -338,7 +338,7 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </div>
               </div>
 
-               {/* AUTOR 3 */}
+              {/* AUTOR 3 */}
               <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Autor 3</label>
@@ -346,8 +346,8 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </div>
               </div>
 
-               {/* IMAGEM 3 */}
-               <div className="col-md-12">
+              {/* IMAGEM 3 */}
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Imagem 3 {formulario?.imagem3 && <a href={formulario.imagem3} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="image/png" onChange={(e: any) => { setFieldValue("imagem3", e.target.files[0]) }} />
@@ -361,8 +361,8 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </tr>
               </thead>
 
-               {/* AUDIO TÍTULO 4 */}
-               <div className="col-md-6">
+              {/* AUDIO TÍTULO 4 */}
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Áudio Título 4 {formulario?.audio4 && <a href={formulario.audio4} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audio4", e.target.files[0]) }} />
@@ -393,7 +393,7 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </div>
               </div>
 
-               {/* AUTOR 4 */}
+              {/* AUTOR 4 */}
               <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Autor 4</label>
@@ -401,8 +401,8 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </div>
               </div>
 
-               {/* IMAGEM 4 */}
-               <div className="col-md-12">
+              {/* IMAGEM 4 */}
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Imagem 4 {formulario?.imagem4 && <a href={formulario.imagem4} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="image/png" onChange={(e: any) => { setFieldValue("imagem4", e.target.files[0]) }} />
@@ -416,8 +416,8 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </tr>
               </thead>
 
-               {/* AUDIO TÍTULO 5 */}
-               <div className="col-md-6">
+              {/* AUDIO TÍTULO 5 */}
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Áudio Título 5 {formulario?.audio5 && <a href={formulario.audio5} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audio5", e.target.files[0]) }} />
@@ -448,7 +448,7 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </div>
               </div>
 
-               {/* AUTOR 5 */}
+              {/* AUTOR 5 */}
               <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Autor 5</label>
@@ -456,8 +456,8 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </div>
               </div>
 
-               {/* IMAGEM 5 */}
-               <div className="col-md-12">
+              {/* IMAGEM 5 */}
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Imagem 5 {formulario?.imagem5 && <a href={formulario.imagem5} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="image/png" onChange={(e: any) => { setFieldValue("imagem5", e.target.files[0]) }} />
@@ -471,8 +471,8 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </tr>
               </thead>
 
-               {/* AUDIO TÍTULO 6 */}
-               <div className="col-md-6">
+              {/* AUDIO TÍTULO 6 */}
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Áudio Título 6 {formulario?.audio6 && <a href={formulario.audio6} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audio6", e.target.files[0]) }} />
@@ -503,7 +503,7 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </div>
               </div>
 
-               {/* AUTOR 6 */}
+              {/* AUTOR 6 */}
               <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Autor 6</label>
@@ -511,8 +511,8 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
                 </div>
               </div>
 
-               {/* IMAGEM 6 */}
-               <div className="col-md-12">
+              {/* IMAGEM 6 */}
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Imagem 6 {formulario?.imagem6 && <a href={formulario.imagem6} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="image/png" onChange={(e: any) => { setFieldValue("imagem6", e.target.files[0]) }} />

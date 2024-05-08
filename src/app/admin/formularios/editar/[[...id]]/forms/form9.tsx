@@ -198,8 +198,8 @@ export default function Formulario9({ formulario, handleSalvar }: Formulario9Pro
                 </div>
               </div>
 
-               {/* TEXTO 2 */}
-               <div className="col-md-6">
+              {/* TEXTO 2 */}
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Texto 2</label>
                   <Field as="textarea" className="form-control" name="texto2" />
@@ -238,8 +238,8 @@ export default function Formulario9({ formulario, handleSalvar }: Formulario9Pro
                 </div>
               </div>
 
-               {/* AUDIO 5 */}
-               <div className="col-md-6">
+              {/* AUDIO 5 */}
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Audio 5 {formulario?.audio5 && <a href={formulario.audio5} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audio5", e.target.files[0]) }} />
@@ -270,9 +270,9 @@ export default function Formulario9({ formulario, handleSalvar }: Formulario9Pro
                 </div>
               </div>
 
-              
-               {/* AUDIO 6 */}
-               <div className="col-md-6">
+
+              {/* AUDIO 6 */}
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Audio 6 {formulario?.audio6 && <a href={formulario.audio6} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audio6", e.target.files[0]) }} />

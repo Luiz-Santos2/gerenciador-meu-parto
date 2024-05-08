@@ -195,8 +195,8 @@ export default function Formulario12({ formulario, handleSalvar }: Formulario12P
                 </div>
               </div>
 
-               {/* IMAGEM 3 */}
-               <div className="col-md-6">
+              {/* IMAGEM 3 */}
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Imagem 3 {formulario?.imagem3 && <a href={formulario.imagem3} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="image/png" onChange={(e: any) => { setFieldValue("imagem3", e.target.files[0]) }} />

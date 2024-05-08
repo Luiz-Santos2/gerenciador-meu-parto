@@ -105,8 +105,8 @@ export default function Formulario5({ formulario, handleSalvar }: Formulario7Pro
                 </div>
               </div>
 
-               {/* SUBTÍTULO 1 */}
-               <div className="col-md-12">
+              {/* SUBTÍTULO 1 */}
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Subtítulo 1</label>
                   <Field as="textarea" className="form-control" name="subtítulo1" />
@@ -185,8 +185,8 @@ export default function Formulario5({ formulario, handleSalvar }: Formulario7Pro
                 </div>
               </div>
 
-               {/* TEXTO 2 */}
-               <div className="col-md-12">
+              {/* TEXTO 2 */}
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Texto 2</label>
                   <Field as="textarea" className="form-control" name="texto2" />

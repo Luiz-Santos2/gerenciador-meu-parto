@@ -66,7 +66,7 @@ export default function Formulario10({ formulario, handleSalvar }: Formulario10P
           dados.video2 = await getDownloadURL(snapshot.ref);
         })
     }
-   
+
 
     handleSalvar(dados);
   }
@@ -82,7 +82,7 @@ export default function Formulario10({ formulario, handleSalvar }: Formulario10P
           <div className="card-body">
             <div className="row">
 
-            <thead>
+              <thead>
                 <tr>
                   <th className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Pega Correta</th>
                   <th className="text-secondary opacity-7"></th>
@@ -113,16 +113,16 @@ export default function Formulario10({ formulario, handleSalvar }: Formulario10P
                 </div>
               </div>
 
-                {/* VÍDEO 1 */}
-                <div className="col-md-6">
+              {/* VÍDEO 1 */}
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Video 1 {formulario?.video1 && <a href={formulario.video1} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="video/mp4" onChange={(e: any) => { setFieldValue("video1", e.target.files[0]) }} />
                 </div>
               </div>
 
-               {/* AUTOR 1 */}
-               <div className="col-md-6">
+              {/* AUTOR 1 */}
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Autor 1</label>
                   <Field as="textarea" className="form-control" name="autor1" />
@@ -168,8 +168,8 @@ export default function Formulario10({ formulario, handleSalvar }: Formulario10P
                 </div>
               </div>
 
-               {/* TEXTO 3 */}
-               <div className="col-md-12">
+              {/* TEXTO 3 */}
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Texto 3</label>
                   <Field as="textarea" className="form-control" name="texto3" />
@@ -191,7 +191,7 @@ export default function Formulario10({ formulario, handleSalvar }: Formulario10P
                 </div>
               </div>
 
-              
+
               {/* TÍTULO 3 */}
               <div className="col-md-6">
                 <div className="form-group">
