@@ -10,7 +10,21 @@ const FormularioService = {
      */
     buscarFormularios: async (): Promise<any[]> => {
         //Retorna a lista de formulários
-        return ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"]
+        return [
+            { id: "1", descricao: 'Sobre' },
+            { id: "2", descricao: 'Home' },
+            { id: "3", descricao: 'Menu periodo e fases' },
+            { id: "4", descricao: 'Detalhes período fases' },
+            { id: "5", descricao: 'Menu como aliviar a dor' },
+            { id: "6", descricao: 'Detalhes Como aliviar a dor' },
+            { id: "7", descricao: 'Posição para parir' },
+            { id: "8", descricao: 'Menu mamadas inicias' },
+            { id: "9", descricao: 'Detalhes primeira tela de mamadas Inicias' },
+            { id: "10", descricao: 'Detalhes segunda e terceira tela de mamadas inicias' },
+            { id: "11", descricao: 'Menu cuidados no inicio do pós-parto' },
+            { id: "12", descricao: 'Detalhes da primeira tela de cuidados no inicio do pós-parto' },
+            { id: "13", descricao: 'Detalhes da segunda e terceira tela de cuidados no inicio do pós-parto' },
+        ]
     },
 
     /**

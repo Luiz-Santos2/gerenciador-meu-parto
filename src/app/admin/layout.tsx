@@ -81,7 +81,7 @@ export default function AdminLayout({ children }: any) {
                         <div className="container-fluid py-1 px-3 justify-content-end">
 
                             <p className="nav-link text-white font-weight-bold text-right">
-                                Bem vindo, {usuario.nome}
+                                Bem vindo, {usuario.email}
                                 <i className="fa fa-user me-sm-1"></i>
                                 <span className="d-sm-inline" onClick={handleSair}>(Deslogar)</span>
                             </p>

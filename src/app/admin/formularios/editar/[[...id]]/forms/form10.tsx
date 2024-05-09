@@ -183,17 +183,8 @@ export default function Formulario10({ formulario, handleSalvar }: Formulario10P
                 </tr>
               </thead>
 
-              {/* AUDIO 4 */}
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label className="form-control-label">Audio 4 {formulario?.audio4 && <a href={formulario.audio4} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
-                  <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audio4", e.target.files[0]) }} />
-                </div>
-              </div>
-
-
               {/* TÍTULO 3 */}
-              <div className="col-md-6">
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Título 3</label>
                   <Field as="textarea" className="form-control" name="titulo3" />

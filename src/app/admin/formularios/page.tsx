@@ -40,12 +40,12 @@ export default function FormulariosPage () {
                             <td>
                                 <div className="d-flex px-2 py-1">
                                     <div className="d-flex flex-column justify-content-center">
-                                        <h6 className="mb-0 text-sm">Tela #{formulario}</h6>
+                                        <h6 className="mb-0 text-sm">Tela {formulario.id}: {formulario.descricao}</h6>
                                     </div>
                                 </div>
                             </td>
                         <td className="align-middle">
-                            <Link href={`/admin/formularios/editar/${formulario}`} className="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                            <Link href={`/admin/formularios/editar/${formulario.id}`} className="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                             Abrir Formulário
                             </Link>
                         </td>
