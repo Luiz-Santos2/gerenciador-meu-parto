@@ -13,7 +13,7 @@ export default function Formulario10({ formulario, handleSalvar }: Formulario10P
 
   const handleSubmit = async (dados: any) => {
     //trata os arquivos
-    if (dados.audio1) {
+    if (dados.audio1 && typeof (dados.audio1) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela10/audio1.mp3'), dados.audio1)
         .then(async snapshot => {
@@ -22,7 +22,7 @@ export default function Formulario10({ formulario, handleSalvar }: Formulario10P
         })
     }
 
-    if (dados.audio2) {
+    if (dados.audio2 && typeof (dados.audio2) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela10/audio2.mp3'), dados.audio2)
         .then(async snapshot => {
@@ -31,7 +31,7 @@ export default function Formulario10({ formulario, handleSalvar }: Formulario10P
         })
     }
 
-    if (dados.audio3) {
+    if (dados.audio3 && typeof (dados.audio3) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela10/audio3.mp3'), dados.audio3)
         .then(async snapshot => {
@@ -40,7 +40,7 @@ export default function Formulario10({ formulario, handleSalvar }: Formulario10P
         })
     }
 
-    if (dados.audio4) {
+    if (dados.audio4 && typeof (dados.audio4) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela10/audio4.mp3'), dados.audio4)
         .then(async snapshot => {
@@ -49,7 +49,7 @@ export default function Formulario10({ formulario, handleSalvar }: Formulario10P
         })
     }
 
-    if (dados.video1) {
+    if (dados.video1 && typeof (dados.video1) != 'string') {
       //converte o video para blob
       await uploadBytesResumable(ref(storage, 'tela10/video1.mp4'), dados.video1)
         .then(async snapshot => {
@@ -58,7 +58,7 @@ export default function Formulario10({ formulario, handleSalvar }: Formulario10P
         })
     }
 
-    if (dados.video2) {
+    if (dados.video2 && typeof (dados.video2) != 'string') {
       //converte o video para blob
       await uploadBytesResumable(ref(storage, 'tela10/video2.mp4'), dados.video2)
         .then(async snapshot => {
@@ -82,8 +82,8 @@ export default function Formulario10({ formulario, handleSalvar }: Formulario10P
           <div className="card-body">
             <div className="row">
 
-               {/* TÍTULO PRINCIPAL */}
-               <div className="col-md-12">
+              {/* TÍTULO PRINCIPAL */}
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Título Principal</label>
                   <Field as="textarea" className="form-control" name="tituloPrincipal" />

@@ -13,16 +13,16 @@ export default function Formulario5({ formulario, handleSalvar }: Formulario7Pro
 
   const handleSubmit = async (dados: any) => {
     //trata os arquivos
-    if (dados.audio) {
+    if (dados.audio && typeof (dados.audio) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela5/audio.mp3'), dados.audio)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o audio para URL
           dados.audio = await getDownloadURL(snapshot.ref);
         })
     }
 
-    if (dados.imagem1) {
+    if (dados.imagem1 && typeof (dados.imagem1) != 'string') {
       //converte o imagem para blob
       await uploadBytesResumable(ref(storage, 'tela7/imagem1.jpg'), dados.imagem1)
         .then(async snapshot => {
@@ -31,7 +31,7 @@ export default function Formulario5({ formulario, handleSalvar }: Formulario7Pro
         })
     }
 
-    if (dados.imagem2) {
+    if (dados.imagem2 && typeof (dados.imagem2) != 'string') {
       //converte o imagem para blob
       await uploadBytesResumable(ref(storage, 'tela7/imagem2.jpg'), dados.imagem2)
         .then(async snapshot => {
@@ -40,7 +40,7 @@ export default function Formulario5({ formulario, handleSalvar }: Formulario7Pro
         })
     }
 
-    if (dados.imagem3) {
+    if (dados.imagem3 && typeof (dados.imagem3) != 'string') {
       //converte o imagem para blob
       await uploadBytesResumable(ref(storage, 'tela7/imagem3.jpg'), dados.imagem3)
         .then(async snapshot => {
@@ -49,7 +49,7 @@ export default function Formulario5({ formulario, handleSalvar }: Formulario7Pro
         })
     }
 
-    if (dados.imagem4) {
+    if (dados.imagem4 && typeof (dados.imagem4) != 'string') {
       //converte o imagem para blob
       await uploadBytesResumable(ref(storage, 'tela7/imagem4.jpg'), dados.imagem4)
         .then(async snapshot => {
@@ -58,7 +58,7 @@ export default function Formulario5({ formulario, handleSalvar }: Formulario7Pro
         })
     }
 
-    if (dados.imagem5) {
+    if (dados.imagem5 && typeof (dados.imagem5) != 'string') {
       //converte o imagem para blob
       await uploadBytesResumable(ref(storage, 'tela7/imagem5.jpg'), dados.imagem5)
         .then(async snapshot => {

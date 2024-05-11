@@ -13,74 +13,74 @@ export default function Formulario3({ formulario, handleSalvar }: Formulario3Pro
 
   const handleSubmit = async (dados: any) => {
     //trata os arquivos
-    if (dados.audioTitulo1) {
+    if (dados.audioTitulo1 && typeof (dados.audioTitulo1) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela3/audioTitulo1.mp3'), dados.audioTitulo1)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o audio para URL
           dados.audioTitulo1 = await getDownloadURL(snapshot.ref);
         })
     }
 
-    if (dados.audioTitulo2) {
+    if (dados.audioTitulo2 && typeof (dados.audioTitulo2) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela3/audioTitulo2.mp3'), dados.audioTitulo2)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o audio para URL
           dados.audioTitulo2 = await getDownloadURL(snapshot.ref);
         })
     }
 
-    if (dados.audioTitulo3) {
+    if (dados.audioTitulo3 && typeof (dados.audioTitulo3) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela3/audioTitulo3.mp3'), dados.audioTitulo3)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o audio para URL
           dados.audioTitulo3 = await getDownloadURL(snapshot.ref);
         })
     }
 
-    if (dados.audioSubtitulo1) {
+    if (dados.audioSubtitulo1 && typeof (dados.audioSubtitulo1) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela3/audioSubtitulo1.mp3'), dados.audioSubtitulo1)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o audio para URL
           dados.audioSubtitulo1 = await getDownloadURL(snapshot.ref);
         })
     }
 
-    if (dados.audioSubtitulo2) {
+    if (dados.audioSubtitulo2 && typeof (dados.audioSubtitulo2) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela3/audioSubtitulo2.mp3'), dados.audioSubtitulo2)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o audio para URL
           dados.audioSubtitulo2 = await getDownloadURL(snapshot.ref);
         })
     }
 
-    if (dados.audioSubtitulo3) {
+    if (dados.audioSubtitulo3 && typeof (dados.audioSubtitulo3) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela3/audioSubtitulo3.mp3'), dados.audioSubtitulo3)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o audio para URL
           dados.audioSubtitulo3 = await getDownloadURL(snapshot.ref);
         })
     }
 
-    if (dados.audioSubtitulo4) {
+    if (dados.audioSubtitulo4 && typeof (dados.audioSubtitulo4) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela3/audioSubtitulo4.mp3'), dados.audioSubtitulo4)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o audio para URL
           dados.audioSubtitulo4 = await getDownloadURL(snapshot.ref);
         })
     }
 
-    if (dados.audioSubtitulo5) {
+    if (dados.audioSubtitulo5 && typeof (dados.audioSubtitulo5) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela3/audioSubtitulo5.mp3'), dados.audioSubtitulo5)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o audio para URL
           dados.audioSubtitulo5 = await getDownloadURL(snapshot.ref);
         })
     }

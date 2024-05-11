@@ -13,7 +13,7 @@ export default function Formulario9({ formulario, handleSalvar }: Formulario9Pro
 
   const handleSubmit = async (dados: any) => {
     //trata os arquivos
-    if (dados.audio1) {
+    if (dados.audio1 && typeof (dados.audio1) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela9/audio1.mp3'), dados.audio1)
         .then(async snapshot => {
@@ -22,7 +22,7 @@ export default function Formulario9({ formulario, handleSalvar }: Formulario9Pro
         })
     }
 
-    if (dados.audio2) {
+    if (dados.audio2 && typeof (dados.audio2) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela9/audio2.mp3'), dados.audio2)
         .then(async snapshot => {
@@ -31,7 +31,7 @@ export default function Formulario9({ formulario, handleSalvar }: Formulario9Pro
         })
     }
 
-    if (dados.audio3) {
+    if (dados.audio3 && typeof (dados.audio3) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela9/audio3.mp3'), dados.audio3)
         .then(async snapshot => {
@@ -40,7 +40,7 @@ export default function Formulario9({ formulario, handleSalvar }: Formulario9Pro
         })
     }
 
-    if (dados.audio4) {
+    if (dados.audio4 && typeof (dados.audio4) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela9/audio4.mp3'), dados.audio4)
         .then(async snapshot => {
@@ -49,7 +49,7 @@ export default function Formulario9({ formulario, handleSalvar }: Formulario9Pro
         })
     }
 
-    if (dados.audio5) {
+    if (dados.audio5 && typeof (dados.audio5) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela9/audio5.mp3'), dados.audio5)
         .then(async snapshot => {
@@ -58,7 +58,7 @@ export default function Formulario9({ formulario, handleSalvar }: Formulario9Pro
         })
     }
 
-    if (dados.audio6) {
+    if (dados.audio6 && typeof (dados.audio6) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela9/audio6.mp3'), dados.audio6)
         .then(async snapshot => {
@@ -67,7 +67,7 @@ export default function Formulario9({ formulario, handleSalvar }: Formulario9Pro
         })
     }
 
-    if (dados.imagem1) {
+    if (dados.imagem1 && typeof (dados.imagem1) != 'string') {
       //converte o imagem para blob
       await uploadBytesResumable(ref(storage, 'tela9/imagem1.jpg'), dados.imagem1)
         .then(async snapshot => {
@@ -76,7 +76,7 @@ export default function Formulario9({ formulario, handleSalvar }: Formulario9Pro
         })
     }
 
-    if (dados.imagem2) {
+    if (dados.imagem2 && typeof (dados.imagem2) != 'string') {
       //converte o imagem para blob
       await uploadBytesResumable(ref(storage, 'tela9/imagem2.jpg'), dados.imagem2)
         .then(async snapshot => {
@@ -85,7 +85,7 @@ export default function Formulario9({ formulario, handleSalvar }: Formulario9Pro
         })
     }
 
-    if (dados.imagem3) {
+    if (dados.imagem3 && typeof (dados.imagem3) != 'string') {
       //converte o imagem para blob
       await uploadBytesResumable(ref(storage, 'tela9/imagem3.jpg'), dados.imagem3)
         .then(async snapshot => {
@@ -94,7 +94,7 @@ export default function Formulario9({ formulario, handleSalvar }: Formulario9Pro
         })
     }
 
-    if (dados.imagem4) {
+    if (dados.imagem4 && typeof (dados.imagem4) != 'string') {
       //converte o imagem para blob
       await uploadBytesResumable(ref(storage, 'tela9/imagem4.jpg'), dados.imagem4)
         .then(async snapshot => {
@@ -103,7 +103,7 @@ export default function Formulario9({ formulario, handleSalvar }: Formulario9Pro
         })
     }
 
-    if (dados.imagem5) {
+    if (dados.imagem5 && typeof (dados.imagem5) != 'string') {
       //converte o imagem para blob
       await uploadBytesResumable(ref(storage, 'tela9/imagem5.jpg'), dados.imagem5)
         .then(async snapshot => {

@@ -13,7 +13,7 @@ export default function Formulario5({ formulario, handleSalvar }: Formulario5Pro
 
   const handleSubmit = async (dados: any) => {
     //trata os arquivos
-    if (dados.audio) {
+    if (dados.audio && typeof (dados.audio) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela5/audio.mp3'), dados.audio)
         .then(async snapshot => {
@@ -22,7 +22,7 @@ export default function Formulario5({ formulario, handleSalvar }: Formulario5Pro
         })
     }
 
-    if (dados.imagem) {
+    if (dados.imagem && typeof (dados.imagem) != 'string') {
       //converte a imagem para blob
       await uploadBytesResumable(ref(storage, 'tela5/imagem.png'), dados.imagem)
         .then(async snapshot => {

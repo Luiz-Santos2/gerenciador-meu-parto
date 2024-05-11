@@ -13,7 +13,7 @@ export default function Formulario13({ formulario, handleSalvar }: Formulario13P
 
   const handleSubmit = async (dados: any) => {
     //trata os arquivos
-    if (dados.audio1) {
+    if (dados.audio1 && typeof (dados.audio1) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela13/audio1.mp3'), dados.audio1)
         .then(async snapshot => {
@@ -22,7 +22,7 @@ export default function Formulario13({ formulario, handleSalvar }: Formulario13P
         })
     }
 
-    if (dados.audio2) {
+    if (dados.audio2 && typeof (dados.audio2) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela13/audio2.mp3'), dados.audio2)
         .then(async snapshot => {
@@ -31,7 +31,7 @@ export default function Formulario13({ formulario, handleSalvar }: Formulario13P
         })
     }
 
-    if (dados.audio3) {
+    if (dados.audio3 && typeof (dados.audio3) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela13/audio3.mp3'), dados.audio3)
         .then(async snapshot => {
@@ -40,7 +40,7 @@ export default function Formulario13({ formulario, handleSalvar }: Formulario13P
         })
     }
 
-    if (dados.audio4) {
+    if (dados.audio4 && typeof (dados.audio4) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela13/audio4.png'), dados.audio4)
         .then(async snapshot => {

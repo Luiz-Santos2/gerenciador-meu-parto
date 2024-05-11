@@ -13,7 +13,7 @@ export default function Formulario12({ formulario, handleSalvar }: Formulario12P
 
   const handleSubmit = async (dados: any) => {
     //trata os arquivos
-    if (dados.audio1) {
+    if (dados.audio1 && typeof (dados.audio1) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela12/audio1.mp3'), dados.audio1)
         .then(async snapshot => {
@@ -22,7 +22,7 @@ export default function Formulario12({ formulario, handleSalvar }: Formulario12P
         })
     }
 
-    if (dados.audio2) {
+    if (dados.audio2 && typeof (dados.audio2) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela12/audio2.mp3'), dados.audio2)
         .then(async snapshot => {
@@ -31,7 +31,7 @@ export default function Formulario12({ formulario, handleSalvar }: Formulario12P
         })
     }
 
-    if (dados.audio3) {
+    if (dados.audio3 && typeof (dados.audio3) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela12/audio3.mp3'), dados.audio3)
         .then(async snapshot => {
@@ -40,7 +40,7 @@ export default function Formulario12({ formulario, handleSalvar }: Formulario12P
         })
     }
 
-    if (dados.imagem1) {
+    if (dados.imagem1 && typeof (dados.imagem1) != 'string') {
       //converte a imagem para blob
       await uploadBytesResumable(ref(storage, 'tela12/imagem1.png'), dados.imagem1)
         .then(async snapshot => {
@@ -49,7 +49,7 @@ export default function Formulario12({ formulario, handleSalvar }: Formulario12P
         })
     }
 
-    if (dados.imagem2) {
+    if (dados.imagem2 && typeof (dados.imagem2) != 'string') {
       //converte a imagem para blob
       await uploadBytesResumable(ref(storage, 'tela12/imagem2.png'), dados.imagem2)
         .then(async snapshot => {
@@ -58,7 +58,7 @@ export default function Formulario12({ formulario, handleSalvar }: Formulario12P
         })
     }
 
-    if (dados.imagem3) {
+    if (dados.imagem3 && typeof (dados.imagem3) != 'string') {
       //converte a imagem para blob
       await uploadBytesResumable(ref(storage, 'tela12/imagem3.png'), dados.imagem3)
         .then(async snapshot => {
@@ -89,7 +89,7 @@ export default function Formulario12({ formulario, handleSalvar }: Formulario12P
                   <Field as="textarea" className="form-control" name="tituloPrincipal" />
                 </div>
               </div>
-              
+
               {/* AUDIO 1 */}
               <div className="col-md-6">
                 <div className="form-group">

@@ -13,7 +13,8 @@ export default function Formulario2({ formulario, handleSalvar }: Formulario1Pro
 
   const handleSubmit = async (dados: any) => {
     //trata os arquivos
-    if (dados.audio) {
+    console.log(dados);
+    if (dados.audio && typeof (dados.audio) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela2/audio.mp3'), dados.audio)
         .then(async snapshot => {

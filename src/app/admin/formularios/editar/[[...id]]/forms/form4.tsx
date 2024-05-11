@@ -13,88 +13,83 @@ export default function Formulario4({ formulario, handleSalvar }: Formulario4Pro
 
   const handleSubmit = async (dados: any) => {
     //trata os arquivos
-    if (dados.video1) {
-      //converte o audio para blob
+    if (dados.video1 && typeof (dados.video1) != 'string') {
+      //converte o video para blob
       await uploadBytesResumable(ref(storage, 'tela4/video1.mp4'), dados.video1)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o video para URL
           dados.video1 = await getDownloadURL(snapshot.ref);
         })
     }
-
-    if (dados.audio1) {
+    if (dados.audio1 && typeof (dados.audio1) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela4/audio1.mp4'), dados.audio1)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o audio para URL
           dados.audio1 = await getDownloadURL(snapshot.ref);
         })
     }
-    if (dados.video2) {
-      //converte o audio para blob
+    if (dados.video2 && typeof (dados.video2) != 'string') {
+      //converte o video para blob
       await uploadBytesResumable(ref(storage, 'tela4/video2.mp4'), dados.video2)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o video para URL
           dados.video2 = await getDownloadURL(snapshot.ref);
         })
     }
-
-    if (dados.audio2) {
+    if (dados.audio2 && typeof (dados.audio2) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela4/audio2.mp4'), dados.audio2)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o audio para URL
           dados.audio2 = await getDownloadURL(snapshot.ref);
         })
     }
-    if (dados.video3) {
-      //converte o audio para blob
+    if (dados.video3 && typeof (dados.video3) != 'string') {
+      //converte o video para blob
       await uploadBytesResumable(ref(storage, 'tela4/video3.mp4'), dados.video3)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o video para URL
           dados.video3 = await getDownloadURL(snapshot.ref);
         })
     }
-
-    if (dados.audio3) {
+    if (dados.audio3 && typeof (dados.audio3) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela4/audio3.mp4'), dados.audio3)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera a audio para URL
           dados.audio3 = await getDownloadURL(snapshot.ref);
         })
     }
-    if (dados.video4) {
-      //converte o audio para blob
+    if (dados.video4 && typeof (dados.video4) != 'string') {
+      //converte o video para blob
       await uploadBytesResumable(ref(storage, 'tela4/video4.mp4'), dados.video4)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera a video para URL
           dados.video4 = await getDownloadURL(snapshot.ref);
         })
     }
-
-    if (dados.audio4) {
+    if (dados.audio4 && typeof (dados.audio4) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela4/audio4.mp4'), dados.audio4)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o audio para URL
           dados.audio4 = await getDownloadURL(snapshot.ref);
         })
     }
-    if (dados.video5) {
-      //converte o audio para blob
+    if (dados.video5 && typeof (dados.video5) != 'string') {
+      //converte o video para blob
       await uploadBytesResumable(ref(storage, 'tela4/video5.mp4'), dados.video5)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o video para URL
           dados.video5 = await getDownloadURL(snapshot.ref);
         })
     }
-
-    if (dados.audio5) {
+    if (dados.audio5 && typeof (dados.audio5) != 'string') {
       //converte o audio para blob
       await uploadBytesResumable(ref(storage, 'tela4/audio5.mp4'), dados.audio5)
         .then(async snapshot => {
-          //Altera a imagem para URL
+          //Altera o audio para URL
           dados.audio5 = await getDownloadURL(snapshot.ref);
         })
     }
