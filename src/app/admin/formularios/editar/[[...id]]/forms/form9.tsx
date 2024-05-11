@@ -126,6 +126,13 @@ export default function Formulario9({ formulario, handleSalvar }: Formulario9Pro
           <div className="card-body">
             <div className="row">
 
+              {/* TÍTULO PRINCIPAL */}
+              <div className="col-md-12">
+                <div className="form-group">
+                  <label className="form-control-label">Título Principal</label>
+                  <Field as="textarea" className="form-control" name="tituloPrincipal" />
+                </div>
+              </div>
               {/* AUDIO 1 */}
               <div className="col-md-6">
                 <div className="form-group">

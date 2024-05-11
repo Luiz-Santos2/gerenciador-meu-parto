@@ -189,6 +189,14 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
           <div className="card-body">
             <div className="row">
 
+               {/* TÍTULO  PRINCIPAL*/}
+               <div className="col-md-12">
+                <div className="form-group">
+                  <label className="form-control-label">Título Principal</label>
+                  <Field as="textarea" className="form-control" name="tituloPrincipal" />
+                </div>
+              </div>
+
               <thead>
                 <tr>
                   <th className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Exercícios para a pelve e períneo</th>

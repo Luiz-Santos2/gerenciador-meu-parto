@@ -94,7 +94,7 @@ export default function Formulario5({ formulario, handleSalvar }: Formulario5Pro
               </div>
 
               {/* MENU 5 */}
-              <div className="col-md-12">
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Menu 5</label>
                   <Field as="textarea" className="form-control" name="menu5" />
@@ -102,7 +102,7 @@ export default function Formulario5({ formulario, handleSalvar }: Formulario5Pro
               </div>
 
               {/* MENU 6 */}
-              <div className="col-md-12">
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Menu 6</label>
                   <Field as="textarea" className="form-control" name="menu6" />

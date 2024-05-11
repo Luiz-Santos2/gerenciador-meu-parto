@@ -45,7 +45,7 @@ export default function Formulario13({ formulario, handleSalvar }: Formulario13P
       await uploadBytesResumable(ref(storage, 'tela13/audio4.png'), dados.audio4)
         .then(async snapshot => {
           //Altera o audio para URL
-          dados.imagem3 = await getDownloadURL(snapshot.ref);
+          dados.audio4 = await getDownloadURL(snapshot.ref);
         })
     }
 
@@ -63,6 +63,14 @@ export default function Formulario13({ formulario, handleSalvar }: Formulario13P
         <Form>
           <div className="card-body">
             <div className="row">
+
+               {/* TÍTULO PRINCIPAL */}
+               <div className="col-md-12">
+                <div className="form-group">
+                  <label className="form-control-label">Título Principal</label>
+                  <Field as="textarea" className="form-control" name="tituloPrincipal" />
+                </div>
+              </div>
 
               {/* AUDIO 1 */}
               <div className="col-md-6">

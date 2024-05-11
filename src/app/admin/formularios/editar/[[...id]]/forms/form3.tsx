@@ -99,6 +99,14 @@ export default function Formulario3({ formulario, handleSalvar }: Formulario3Pro
           <div className="card-body">
             <div className="row">
 
+              {/* TITULO PRINCIPAL */}
+              <div className="col-md-12">
+                <div className="form-group">
+                  <label className="form-control-label">Título principal</label>
+                  <Field as="textarea" className="form-control" name="tituloPrincipal" />
+                </div>
+              </div>
+
               <thead>
                 <tr>
                   <th className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">1º Período do Trabalho de Parto</th>

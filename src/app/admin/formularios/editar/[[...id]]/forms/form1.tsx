@@ -31,21 +31,12 @@ export default function Formulario1({ formulario, handleSalvar }: Formulario1Pro
         })
     }
 
-    if (dados.imagem1) {
+    if (dados.imagem) {
       //converte a imagem para blob
-      await uploadBytesResumable(ref(storage, 'tela1/imagem1.jpg'), dados.imagem1)
+      await uploadBytesResumable(ref(storage, 'tela1/imagem.jpg'), dados.imagem)
         .then(async snapshot => {
           //Altera a imagem para URL
-          dados.imagem1 = await getDownloadURL(snapshot.ref);
-        })
-    }
-
-    if (dados.imagem2) {
-      //converte a imagem para blob
-      await uploadBytesResumable(ref(storage, 'tela1/imagem2.jpg'), dados.imagem2)
-        .then(async snapshot => {
-          //Altera a imagem para URL
-          dados.imagem2 = await getDownloadURL(snapshot.ref);
+          dados.imagem = await getDownloadURL(snapshot.ref);
         })
     }
 
@@ -79,14 +70,6 @@ export default function Formulario1({ formulario, handleSalvar }: Formulario1Pro
                 </div>
               </div>
 
-              {/* IMAGEM 1 */}
-              <div className="col-md-12">
-                <div className="form-group">
-                  <label className="form-control-label">Imagem 1 {formulario?.imagem1 && <a href={formulario.imagem1} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
-                  <input className="form-control" type="file" accept="image/png" onChange={(e: any) => { setFieldValue("imagem1", e.target.files[0]) }} />  
-                </div>
-              </div>
-
               {/* AUDIO 2 */}
               <div className="col-md-12">
                 <div className="form-group">
@@ -103,11 +86,11 @@ export default function Formulario1({ formulario, handleSalvar }: Formulario1Pro
                 </div>
               </div>
 
-              {/* IMAGEM 2 */}
+              {/* IMAGEM */}
               <div className="col-md-12">
                 <div className="form-group">
-                  <label className="form-control-label">Imagem 2 {formulario?.imagem2 && <a href={formulario.imagem2} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
-                  <input className="form-control" type="file" accept="image/png" onChange={(e: any) => { setFieldValue("imagem2", e.target.files[0]) }} />
+                  <label className="form-control-label">Imagem {formulario?.imagem && <a href={formulario.imagem} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
+                  <input className="form-control" type="file" accept="image/png" onChange={(e: any) => { setFieldValue("imagem", e.target.files[0]) }} />
                 </div>
               </div>
 

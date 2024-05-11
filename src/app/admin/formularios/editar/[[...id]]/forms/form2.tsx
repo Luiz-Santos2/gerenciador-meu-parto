@@ -15,7 +15,7 @@ export default function Formulario2({ formulario, handleSalvar }: Formulario1Pro
     //trata os arquivos
     if (dados.audio) {
       //converte o audio para blob
-      await uploadBytesResumable(ref(storage, 'tela2/audio.jpg'), dados.audio)
+      await uploadBytesResumable(ref(storage, 'tela2/audio.mp3'), dados.audio)
         .then(async snapshot => {
           //Altera o audio para URL
           dados.audio = await getDownloadURL(snapshot.ref);
@@ -35,6 +35,14 @@ export default function Formulario2({ formulario, handleSalvar }: Formulario1Pro
         <Form>
           <div className="card-body">
             <div className="row">
+
+              {/* TITULO */}
+              <div className="col-md-12">
+                <div className="form-group">
+                  <label className="form-control-label">Título</label>
+                  <Field as="textarea" className="form-control" name="titulo" />
+                </div>
+              </div>
 
               {/* AUDIO */}
               <div className="col-md-12">

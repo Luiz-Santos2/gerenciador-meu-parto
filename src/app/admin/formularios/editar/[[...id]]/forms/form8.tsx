@@ -46,10 +46,18 @@ export default function Formulario8({ formulario, handleSalvar }: Formulario5Pro
             <div className="row">
 
               {/* AUDIO */}
-              <div className="col-md-12">
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Audio {formulario?.audio && <a href={formulario.audio} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audio", e.target.files[0]) }} />
+                </div>
+              </div>
+
+               {/* TITULO */}
+               <div className="col-md-6">
+                <div className="form-group">
+                  <label className="form-control-label">Título</label>
+                  <Field as="textarea" className="form-control" name="titulo" />
                 </div>
               </div>
 
@@ -78,7 +86,7 @@ export default function Formulario8({ formulario, handleSalvar }: Formulario5Pro
               </div>
 
               {/* MENU 3 */}
-              <div className="col-md-12">
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Menu 3</label>
                   <Field as="textarea" className="form-control" name="menu3" />
@@ -86,7 +94,7 @@ export default function Formulario8({ formulario, handleSalvar }: Formulario5Pro
               </div>
 
               {/* IMAGEM */}
-              <div className="col-md-12">
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Imagem {formulario?.imagem && <a href={formulario.imagem} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
                   <input className="form-control" type="file" accept="image/png" onChange={(e: any) => { setFieldValue("imagem", e.target.files[0]) }} />
