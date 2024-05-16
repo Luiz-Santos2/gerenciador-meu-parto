@@ -3,6 +3,7 @@ import * as React from 'react';
 import { AdminHeader } from '../../components';
 import { useUsuarioService } from '../../../../services/usuario';
 import { Field, Form, Formik } from 'formik';
+import Link from 'next/link';
 
 export default function UsuarioEditarPage ({params}: any) {
 
@@ -64,6 +65,16 @@ export default function UsuarioEditarPage ({params}: any) {
                 </div>
               </div>
             </div>
+
+            {/* BOTÃO VOLTAR */}
+            <div className="col-md-12">
+                <div className="form-group">
+                  <Link href={`/admin/usuarios/`} className="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Back form">
+                    Voltar
+                  </Link>
+                </div>
+              </div>
+
             </Form>)}   
           </Formik>
       </main>
