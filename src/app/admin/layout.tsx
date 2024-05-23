@@ -38,7 +38,7 @@ export default function AdminLayout({ children }: any) {
                         <ul className="navbar-nav">
                             {/* Início */}
                             <li className="nav-item">
-                                <Link className={'nav-link ' + (url.includes('dashboard') ? 'active' : '')} href="/admin/inicio">
+                                <Link className={'nav-link ' + (url.includes('inicio') ? 'active' : '')} href="/admin/inicio">
                                     <div className="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                                         <i className="ni ni-tv-2 text-dark text-sm opacity-10"></i>
                                     </div>
