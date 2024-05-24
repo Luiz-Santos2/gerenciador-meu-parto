@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    output: "export",
     env: {
         firebase_apiKey: process.env.firebase_apiKey,
         firebase_authDomain: process.env.firebase_authDomain,

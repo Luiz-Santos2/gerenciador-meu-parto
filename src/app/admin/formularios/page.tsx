@@ -45,7 +45,7 @@ export default function FormulariosPage() {
                     </div>
                   </td>
                   <td className="align-middle">
-                    <Link href={`/admin/formularios/editar/${formulario.id}`} className="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                    <Link href={`/admin/formularios/editar?id=${formulario.id}`} className="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                       Abrir Formulário
                     </Link>
                   </td>
