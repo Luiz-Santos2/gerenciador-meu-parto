@@ -10,21 +10,19 @@ const UsuarioService = {
      * @param senha 
      * @returns {usuario caso logado com sucesso, e o sucesso com um status de logado ou não}
      */
-    logar: async(email: string, senha: string): Promise<{usuario?:any, sucesso:boolean}> => {
-        return signInWithEmailAndPassword(auth, email, senha)
-            .then(async (retorno) => { 
-                //Verifica se o usuario não foi excluido do banco
-                const dados = await getDoc(doc(db, 'users', retorno.user.uid));
-                dados.exists(dados.exists())
-                if (dados.exists())
-                    return { sucesso: true , usuario: retorno.user}
+    logar: async (email: string, senha: string): Promise<{ usuario?: any, sucesso: boolean }> => {
+        try {
+            const retorno = await signInWithEmailAndPassword(auth, email, senha);
+            const dados = await getDoc(doc(db, 'users', retorno.user.uid));
+            if (dados.exists()) {
+                return { sucesso: true, usuario: retorno.user };
+            } else {
                 return { sucesso: false };
-            
-            })
-            .catch(erro => { 
-                console.log(erro)
-                return { sucesso: false }
-            });
+            }
+        } catch (erro) {
+            console.error('Erro ao logar:', erro);
+            return { sucesso: false };
+        }
     },
 
     /**
@@ -32,10 +30,10 @@ const UsuarioService = {
      * @param email 
      * @returns sucesso status booleano caso tenha conseguido solicitar nova senha
      */
-    recuperarSenha: async (email: string): Promise<{sucesso: boolean}> => {
+    recuperarSenha: async (email: string): Promise<{ sucesso: boolean }> => {
         return sendPasswordResetEmail(auth, email)
-            .then((retorno) => { return { sucesso: true }})
-            .catch(erro => { return { sucesso: false }});
+            .then((retorno) => { return { sucesso: true } })
+            .catch(erro => { return { sucesso: false } });
     },
 
     /**
@@ -59,9 +57,9 @@ const UsuarioService = {
      * @param id 
      * @returns 
      */
-    buscar: async (id: string): Promise<any>  => {
+    buscar: async (id: string): Promise<any> => {
         return getDoc(doc(db, 'users', id))
-            .then(retorno => { 
+            .then(retorno => {
                 return (retorno.exists() ? retorno.data() : null)
             })
             .catch(erro => null)
@@ -72,26 +70,24 @@ const UsuarioService = {
      * @param usuario 
      * @returns 
      */
-    cadastrar: async (usuario:any): Promise<{sucesso: boolean}> => {
+    cadastrar: async (usuario: any): Promise<{ sucesso: boolean }> => {
         return createUserWithEmailAndPassword(auth, usuario.email, usuario.senha)
             .then(async retorno => {
                 usuario.uid = retorno.user.uid;
                 delete usuario.senha;
-
                 const usuarioDOC = doc(db, 'users', usuario.uid)
-
                 await setDoc(usuarioDOC, usuario);
                 return { sucesso: true };
             })
-            .catch(erro => { return { sucesso: false} });
+            .catch(erro => { return { sucesso: false } });
     },
-    
+
     /**
      * Excluir um usuario
      * @param usuario 
      * @returns 
      */
-    excluir: async (usuario:any): Promise<{sucesso: boolean}> => {
+    excluir: async (usuario: any): Promise<{ sucesso: boolean }> => {
         return deleteDoc(doc(db, 'users', usuario.uid))
             .then(retorno => {
                 return { sucesso: true }
