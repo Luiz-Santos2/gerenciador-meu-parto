@@ -2,14 +2,13 @@
 const nextConfig = {
     output: "export",
     env: {
-        firebase_apiKey: process.env.firebase_apiKey,
-        firebase_authDomain: process.env.firebase_authDomain,
-        firebase_databaseURL: process.env.firebase_databaseURL,
-        firebase_projectId: process.env.firebase_projectId,
-        firebase_storageBucket: process.env.firebase_storageBucket,
-        firebase_messagingSenderId: process.env.firebase_messagingSenderId,
-        firebase_appId: process.env.firebase_appId,
-        firebase_measurementId: process.env.firebase_measurementId,
+        firebase_apiKey: "AIzaSyAj9U8fIJFGUBw8Tcf5ZM6ulA2geZ-5RWc",
+        firebase_authDomain: "meu-parto.firebaseapp.com",
+        firebase_projectId: "meu-parto",
+        firebase_storageBucket: "meu-parto.appspot.com",
+        firebase_messagingSenderId: "799081790414",
+        firebase_appId: "1:799081790414:web:137872c85703e7b98fc99f",
+        firebase_measurementId: "G-J6CMH49QHX"
     }
 };
 
