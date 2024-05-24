@@ -31,6 +31,6 @@ Dentro da pasta html, existe o template original para quem desejar buscar inform
 - Tela #12 - Detalhes da primeira tela de cuidados no inicio do pós-parto
 - Tela #13 - Detalhes da segunda e terceira tela de cuidados no inicio do pós-parto
 
-# Exemplo disponivel
+# Gerenciador disponível
 
-https://github.com/CarlosWGama/next-template-admin/tree/firebase
+https://luiz-santos2.github.io/gerenciador-meu-parto/
