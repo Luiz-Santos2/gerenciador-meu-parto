@@ -78,10 +78,18 @@ export default function Formulario8({ formulario, handleSalvar }: Formulario5Pro
               </div>
 
               {/* MENU 3 */}
-              <div className="col-md-12">
+              <div className="col-md-6">
                 <div className="form-group">
                   <label className="form-control-label">Menu 3</label>
                   <Field as="textarea" className="form-control" name="menu3" />
+                </div>
+              </div>
+
+               {/* MENU 4 */}
+               <div className="col-md-6">
+                <div className="form-group">
+                  <label className="form-control-label">Menu 4</label>
+                  <Field as="textarea" className="form-control" name="menu4" />
                 </div>
               </div>
 

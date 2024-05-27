@@ -229,18 +229,10 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
               </div>
 
               {/* VÍDEO 1 */}
-              <div className="col-md-6">
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Vídeo 1 {formulario?.video1 && <a href={formulario.video1} target="_blank">(VISUALIZAR VÍDEO)</a>} </label>
                   <input className="form-control" type="file" accept="video/mp4" onChange={(e: any) => { setFieldValue("video1", e.target.files[0]) }} />
-                </div>
-              </div>
-
-              {/* AUTOR 1 */}
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label className="form-control-label">Autor 1</label>
-                  <Field as="textarea" className="form-control" name="autor1" />
                 </div>
               </div>
 
@@ -284,18 +276,10 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
               </div>
 
               {/* VÍDEO 2 */}
-              <div className="col-md-6">
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Vídeo 2 {formulario?.video2 && <a href={formulario.video2} target="_blank">(VISUALIZAR VÍDEO)</a>} </label>
                   <input className="form-control" type="file" accept="video/mp4" onChange={(e: any) => { setFieldValue("video2", e.target.files[0]) }} />
-                </div>
-              </div>
-
-              {/* AUTOR 2 */}
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label className="form-control-label">Autor 2</label>
-                  <Field as="textarea" className="form-control" name="autor2" />
                 </div>
               </div>
 
@@ -339,18 +323,10 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
               </div>
 
               {/* VÍDEO 3 */}
-              <div className="col-md-6">
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Vídeo 3 {formulario?.video3 && <a href={formulario.video3} target="_blank">(VISUALIZAR VÍDEO)</a>} </label>
                   <input className="form-control" type="file" accept="video/mp4" onChange={(e: any) => { setFieldValue("video3", e.target.files[0]) }} />
-                </div>
-              </div>
-
-              {/* AUTOR 3 */}
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label className="form-control-label">Autor 3</label>
-                  <Field as="textarea" className="form-control" name="autor3" />
                 </div>
               </div>
 
@@ -394,18 +370,10 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
               </div>
 
               {/* VÍDEO 4 */}
-              <div className="col-md-6">
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Vídeo 4 {formulario?.video4 && <a href={formulario.video4} target="_blank">(VISUALIZAR VÍDEO)</a>} </label>
                   <input className="form-control" type="file" accept="video/mp4" onChange={(e: any) => { setFieldValue("video4", e.target.files[0]) }} />
-                </div>
-              </div>
-
-              {/* AUTOR 4 */}
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label className="form-control-label">Autor 4</label>
-                  <Field as="textarea" className="form-control" name="autor4" />
                 </div>
               </div>
 
@@ -449,18 +417,10 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
               </div>
 
               {/* VÍDEO 5 */}
-              <div className="col-md-6">
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Vídeo 5 {formulario?.video5 && <a href={formulario.video5} target="_blank">(VISUALIZAR VÍDEO)</a>} </label>
                   <input className="form-control" type="file" accept="video/mp4" onChange={(e: any) => { setFieldValue("video5", e.target.files[0]) }} />
-                </div>
-              </div>
-
-              {/* AUTOR 5 */}
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label className="form-control-label">Autor 5</label>
-                  <Field as="textarea" className="form-control" name="autor5" />
                 </div>
               </div>
 
@@ -504,18 +464,10 @@ export default function Formulario6({ formulario, handleSalvar }: Formulario6Pro
               </div>
 
               {/* VÍDEO 6 */}
-              <div className="col-md-6">
+              <div className="col-md-12">
                 <div className="form-group">
                   <label className="form-control-label">Vídeo 6 {formulario?.video6 && <a href={formulario.video6} target="_blank">(VISUALIZAR VÍDEO)</a>} </label>
                   <input className="form-control" type="file" accept="video/mp4" onChange={(e: any) => { setFieldValue("video6", e.target.files[0]) }} />
-                </div>
-              </div>
-
-              {/* AUTOR 6 */}
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label className="form-control-label">Autor 6</label>
-                  <Field as="textarea" className="form-control" name="autor6" />
                 </div>
               </div>
 

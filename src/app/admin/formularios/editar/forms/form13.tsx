@@ -49,6 +49,24 @@ export default function Formulario13({ formulario, handleSalvar }: Formulario13P
         })
     }
 
+    if (dados.audio5 && typeof (dados.audio5) != 'string') {
+      //converte o audio para blob
+      await uploadBytesResumable(ref(storage, 'tela13/audio5.png'), dados.audio5)
+        .then(async snapshot => {
+          //Altera o audio para URL
+          dados.audio5 = await getDownloadURL(snapshot.ref);
+        })
+    }
+
+    if (dados.audio6 && typeof (dados.audio6) != 'string') {
+      //converte o audio para blob
+      await uploadBytesResumable(ref(storage, 'tela13/audio6.png'), dados.audio6)
+        .then(async snapshot => {
+          //Altera o audio para URL
+          dados.audio6 = await getDownloadURL(snapshot.ref);
+        })
+    }
+
 
     handleSalvar(dados);
   }
@@ -149,6 +167,46 @@ export default function Formulario13({ formulario, handleSalvar }: Formulario13P
                 <div className="form-group">
                   <label className="form-control-label">Texto 3</label>
                   <Field as="textarea" className="form-control" name="texto3" />
+                </div>
+              </div>
+
+              {/* AUDIO 5 */}
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label className="form-control-label">Audio 5{formulario?.audio5 && <a href={formulario.audio5} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
+                  <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audio5", e.target.files[0]) }} />
+                </div>
+              </div>
+
+              {/* TÍTULO 4 */}
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label className="form-control-label">Título 4</label>
+                  <Field as="textarea" className="form-control" name="titulo4" />
+                </div>
+              </div>
+
+               {/* AUDIO 6 */}
+               <div className="col-md-6">
+                <div className="form-group">
+                  <label className="form-control-label">Audio 6{formulario?.audio6 && <a href={formulario.audio6} target="_blank">(VISUALIZAR AUDIO)</a>} </label>
+                  <input className="form-control" type="file" accept="audio/mp3" onChange={(e: any) => { setFieldValue("audio6", e.target.files[0]) }} />
+                </div>
+              </div>
+
+               {/* TEXTO 4 */}
+               <div className="col-md-6">
+                <div className="form-group">
+                  <label className="form-control-label">Texto 4</label>
+                  <Field as="textarea" className="form-control" name="texto4" />
+                </div>
+              </div>
+
+              {/* TEXTO 5 */}
+              <div className="col-md-12">
+                <div className="form-group">
+                  <label className="form-control-label">Texto 5</label>
+                  <Field as="textarea" className="form-control" name="texto5" />
                 </div>
               </div>
 
