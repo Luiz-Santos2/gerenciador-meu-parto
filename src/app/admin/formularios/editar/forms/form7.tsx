@@ -9,13 +9,13 @@ export interface Formulario7Props {
   handleSalvar(dados: any): void;
 }
 
-export default function Formulario5({ formulario, handleSalvar }: Formulario7Props) {
+export default function Formulario7({ formulario, handleSalvar }: Formulario7Props) {
 
   const handleSubmit = async (dados: any) => {
     //trata os arquivos
     if (dados.audio && typeof (dados.audio) != 'string') {
       //converte o audio para blob
-      await uploadBytesResumable(ref(storage, 'tela5/audio.mp3'), dados.audio)
+      await uploadBytesResumable(ref(storage, 'tela7/audio.mp3'), dados.audio)
         .then(async snapshot => {
           //Altera o audio para URL
           dados.audio = await getDownloadURL(snapshot.ref);
